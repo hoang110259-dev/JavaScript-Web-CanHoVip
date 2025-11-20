@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LUGAR — Real Estate</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="btn btn-primary back-to-top" title="Back to top">↑</button>
+
+  <!-- Header -->
+  <header class="site-header bg-white">
+    <nav class="navbar navbar-expand-lg container">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <span class="brand-text">LUGAR</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="ms-3 d-flex align-items-center">
+          <button id="loginToggle" class="btn btn-outline-dark ms-2">Login</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO / HOME -->
+  <section id="home" class="hero d-flex align-items-center justify-content-center text-center">
+    <div class="container">
+      <h1>A home is<br>built with love<br>and dreams</h1>
+      <p class="lead">Find your modern family house and your dream home.</p>
+      <div class="mt-4">
+        <a class="btn btn-dark me-2" href="#projects">Our projects</a>
+        <a class="btn btn-outline-dark" href="#contact">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="award py-5">
+    <div class="container">
+      <div class="award-box row g-0 align-items-center">
+        <div class="col-md-5">
+          <img src="penthouse47.jpg" class="img-fluid h-100 w-100 object-cover" alt="company building">
+        </div>
+        <div class="col-md-7 p-4 p-md-5 bg-white">
+          <h3>Award winning real<br>estate company in Dubai</h3>
+          <p class="text-muted">Trusted by hundreds of clients. We build sustainable and modern homes with passion and precision.</p>
+          <div class="d-flex mt-4 stats">
+            <div class="me-5"><div class="stat-num">34+</div><div class="stat-label">Projects</div></div>
+            <div class="me-5"><div class="stat-num">20y</div><div class="stat-label">Experience</div></div>
+            <div><div class="stat-num">12</div><div class="stat-label">Awards</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects py-5 position-relative">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+        <h4 class="section-title">Ongoing projects</h4>
+        <div class="d-flex align-items-center flex-wrap mt-2 mt-md-0">
+          <input id="searchInput" class="form-control form-control-sm me-2 mb-2 mb-md-0" placeholder="Search projects..." style="min-width:180px">
+          <select id="filterType" class="form-select form-select-sm me-3 mb-2 mb-md-0" style="width:150px;">
+            <option value="">All Types</option>
+            <option value="Villa">Villa</option>
+            <option value="Penthouse">Penthouse</option>
+            <option value="Modern">Modern</option>
+          </select>
+          <button id="prevProject" class="btn btn-outline-secondary me-1 d-none d-md-inline">‹</button>
+          <button id="nextProject" class="btn btn-outline-secondary d-none d-md-inline">›</button>
+        </div>
+      </div>
+
+      <div class="projects-row row g-4" id="projectsRow">
+        <!-- Project cards -->
+        <div class="col-sm-6 col-md-4 col-lg-3 project-col">
+          <div class="card project-card" data-name="Vintage Villa" data-type="Villa" data-address="Dubai Marina" data-price="$350,000">
+            <img src="villa1.jpg" class="card-img-top" alt="Vintage Villa">
+            <div class="card-body">
+              <h6 class="card-title">Vintage Villa</h6>
+              <p class="card-sub">Dubai Marina</p>
+              <p class="card-price">$350,000</p>
+              <a href="#" class="btn btn-outline-primary btn-sm view-details">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 project-col">
+          <div class="card project-card" data-name="Tropical Home" data-type="Modern" data-address="Palm Jumeirah" data-price="$420,000">
+            <img src="villa2.jpg" class="card-img-top" alt="Tropical Home">
+            <div class="card-body">
+              <h6 class="card-title">Tropical Home</h6>
+              <p class="card-sub">Palm Jumeirah</p>
+              <p class="card-price">$420,000</p>
+              <a href="#" class="btn btn-outline-primary btn-sm view-details">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 project-col">
+          <div class="card project-card" data-name="Penthouse" data-type="Penthouse" data-address="Downtown" data-price="$680,000">
+            <img src="penthouse.jpg" class="card-img-top" alt="Penthouse">
+            <div class="card-body">
+              <h6 class="card-title">Penthouse</h6>
+              <p class="card-sub">Downtown</p>
+              <p class="card-price">$680,000</p>
+              <a href="#" class="btn btn-outline-primary btn-sm view-details">View Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 project-col">
+          <div class="card project-card" data-name="Modern Cube" data-type="Modern" data-address="Business Bay" data-price="$500,000">
+            <img src="smartcity.jpg" class="card-img-top" alt="Modern Cube">
+            <div class="card-body">
+              <h6 class="card-title">Modern Cube</h6>
+              <p class="card-sub">Business Bay</p>
+              <p class="card-price">$500,000</p>
+              <a href="#" class="btn btn-outline-primary btn-sm view-details">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <button id="loadMore" class="btn btn-dark">✨ Load More Projects</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="projectModalTitle">Project</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="projectModalBody"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <img src="house-contact.jpg" class="img-fluid rounded-4" alt="contact house">
+        </div>
+        <div class="col-md-6">
+          <h5 class="fw-semibold">Contact us</h5>
+          <p class="text-muted">Reach out to learn more about our projects and services.</p>
+          <form id="contactForm" novalidate>
+            <div class="mb-3"><input type="text" name="name" class="form-control" placeholder="Full name" required></div>
+            <div class="mb-3"><input type="email" name="email" class="form-control" placeholder="Email address" required></div>
+            <div class="mb-3"><input type="tel" name="phone" class="form-control" placeholder="Phone number"></div>
+            <div class="mb-3"><textarea name="message" class="form-control" rows="4" placeholder="Description"></textarea></div>
+            <button class="btn btn-dark" type="submit">Get a quote</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials py-5">
+    <div class="container">
+      <h5 class="mb-4">What Our Clients Say</h5>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card testimonial-card p-3">
+            <img src="1.jpg" class="testimonial-img mb-3" alt="">
+            <p class="mb-0">"Dream house isn't dream anymore..."</p>
+            <small class="text-muted d-block mt-2">Brooklyn Simmons — Artist</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card testimonial-card p-3">
+            <img src="2.jpg" class="testimonial-img mb-3" alt="">
+            <p class="mb-0">"Home is a place to come back to..."</p>
+            <small class="text-muted d-block mt-2">Cristiano Ronaldo — Athlete</small>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card testimonial-card p-3">
+            <img src="3.jpg" class="testimonial-img mb-3" alt="">
+            <p class="mb-0">"We found the perfect home thanks to Lugar."</p>
+            <small class="text-muted d-block mt-2">Alexandra Lee — Entrepreneur</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container text-white">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h6>LUGAR</h6>
+          <p class="small">Modern real estate firm. Building better homes for families.</p>
+        </div>
+        <div class="col-md-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled small">
+            <li><a class="text-decoration-none text-muted" href="#home">Home</a></li>
+            <li><a class="text-decoration-none text-muted" href="#projects">Projects</a></li>
+            <li><a class="text-decoration-none text-muted" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6>Contact</h6>
+          <p class="small">info@lugar.example<br>+84 123 4567</p>
+        </div>
+      </div>
+      <div class="text-center small text-muted mt-4">
+        © <span id="year">2025</span> LUGAR. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal-backdrop-custom" id="loginModal" aria-hidden="true" style="display:none">
+    <div class="modal-box">
+      <h5 class="mb-3">🔐 Login to LUGAR</h5>
+      <input type="text" id="loginUsername" class="form-control mb-2" placeholder="Username">
+      <input type="password" id="loginPassword" class="form-control mb-3" placeholder="Password">
+      <button id="loginSubmit" class="btn btn-dark w-100">Login</button>
+      <button id="loginCancel" class="btn btn-outline-secondary w-100 mt-2">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <!-- Custom JS -->
+  <script src="script.js" defer></script>
+</body>
+</html>
